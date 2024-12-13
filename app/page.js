@@ -17,7 +17,6 @@ export default function Home() {
   const [totalPages, setTotalPages] = useState(1); // To trac
   const [isSlidDown, setIsSlidDown] = useState(false);
 
-  console.log(process.env.TMDB_API_KEY)
 
   useEffect(function () {
     const fetchData = async function () {
@@ -25,20 +24,20 @@ export default function Home() {
         let url = '';
         if (search) {
           // Fetch movies based on the search query
-          url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.TMDB_API_KEY}&query=${search}&page=${page}`;
+          url = `https://api.themoviedb.org/3/search/movie?api_key=2c232c63497b39daf1397f84e07468fd&query=${search}&page=${page}`;
         } else {
           switch (category) {
             case 'Trending':
-              url = `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.TMDB_API_KEY}&page=${page}`;
+              url = `https://api.themoviedb.org/3/trending/movie/day?api_key=2c232c63497b39daf1397f84e07468fd&page=${page}`;
               break;
             case 'Top Rated':
-              url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${process.env.TMDB_API_KEY}&page=${page}`;
+              url = `https://api.themoviedb.org/3/movie/top_rated?api_key=2c232c63497b39daf1397f84e07468fd&page=${page}`;
               break;
             case 'Latest':
-              url = `https://api.themoviedb.org/3/movie/latest?api_key=${process.env.TMDB_API_KEY}&page=${page}`;
+              url = `https://api.themoviedb.org/3/movie/latest?api_key=2c232c63497b39daf1397f84e07468fd&page=${page}`;
               break;
             case 'Upcoming':
-              url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.TMDB_API_KEY}&page=${page}`;
+              url = `https://api.themoviedb.org/3/movie/upcoming?api_key=2c232c63497b39daf1397f84e07468fd&page=${page}`;
               break;
             case 'Now Playing':
               url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.TMDB_API_KEY}&page=${page}`;

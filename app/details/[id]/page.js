@@ -38,7 +38,7 @@ const Page = () => {
 
   useEffect(function () {
     const fetchData = async function () {
-      const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${process.env.TMDB_API_KEY}`)
+      const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=2c232c63497b39daf1397f84e07468fd`)
       const result = await response.json()
       const video = result.results
       if (video && video.length > 0) {
