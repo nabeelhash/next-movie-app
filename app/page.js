@@ -40,7 +40,7 @@ export default function Home() {
               url = `https://api.themoviedb.org/3/movie/upcoming?api_key=2c232c63497b39daf1397f84e07468fd&page=${page}`;
               break;
             case 'Now Playing':
-              url = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.TMDB_API_KEY}&page=${page}`;
+              url = `https://api.themoviedb.org/3/movie/now_playing?api_key=2c232c63497b39daf1397f84e07468fd&page=${page}`;
               break;
             default:
               return;
@@ -64,7 +64,7 @@ export default function Home() {
   return (
     <div className="bg-black min-h-screen flex flex-col">
       <div className="flex flex-col">
-        <div className={`w-full h-[730px] mt-[35px] relative bg-cover bg-bottom`}>
+        <div className={`w-full h-full mt-[65px] md:mt-[55px] relative bg-cover bg-bottom`}>
           <Image alt="hero" className="w-full h-full object-cover " src={heros} />
           {/* Optional overlay if needed */}
           <div className="absolute top-0 left-0 w-full h-full inset-0 bg-black bg-opacity-20 z-2"></div>
