@@ -9,7 +9,7 @@ const Sidebar = () => {
         <div className='mt-[20px] bg-black text-white px-4 py-2'>
             <div className='flex flex-col gap-3'>
                 <p className='text-lg font-semibold'>NEW MOVIES</p>
-                <div className="min-h-[6px] rounded w-[600px] bg-gradient-to-r from-red-600 to-transparent"></div>
+                <div className="min-h-[6px] rounded w-[250px] md:w-[600px] bg-gradient-to-r from-red-600 to-transparent"></div>
                 <div className='text-xs md:text-sm text-gray-300 flex gap-1 md:gap-2 pl-3 '>
                     {categoryValues.map((val, index) => (
                         <div key={index} className=''>
